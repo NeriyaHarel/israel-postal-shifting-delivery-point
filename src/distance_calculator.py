@@ -1,6 +1,6 @@
 from typing import Protocol
 
-from geolocation import Geolocation
+from .location import Geolocation
 
 from geopy import distance
 from enum import Enum

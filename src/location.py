@@ -1,6 +1,13 @@
 from typing import NamedTuple
 
 
+class Address(NamedTuple):
+    city: str
+    street: str
+    house: int
+    country: str = 'IL'
+
+
 class Geolocation(NamedTuple):
     latitude: float
     longitude: float
