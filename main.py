@@ -104,9 +104,7 @@ def main():
                            suffix=f'0/{len(delivery_points)}', length=50, printEnd='')
         for i, point in enumerate(delivery_points):
             if not point.geolocation:
-                if point.address.street.startswith('שד') or point.address.street.startswith('רח'):
-                    add_geolocation(geocoder, point)
-                # add_geolocation(geocoder, point)
+                add_geolocation(geocoder, point)
                 # save the geolocation to the cache file
                 # we do it on every iteration so we don't lose the progress
                 # and yes it's not the most efficient way but it's the simplest
